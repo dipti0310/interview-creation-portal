@@ -3,7 +3,6 @@ import './App.css';
 // import { Form } from 'react-bootstrap';
 import Forms from "./components/Forms"
 import { Route, BrowserRouter, Routes, Link } from "react-router-dom";
-import EditInterview from './components/EditInterview';
 import InterviewState from './context/interview/InterviewState';
 import Interviews from './components/Interviews';
 
