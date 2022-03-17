@@ -1,23 +1,49 @@
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
 import './App.css';
+// import { Form } from 'react-bootstrap';
+import Forms from "./components/Forms"
+import { Route, BrowserRouter, Routes, Link } from "react-router-dom";
+import EditInterview from './components/EditInterview';
+import InterviewState from './context/interview/InterviewState';
+import Interviews from './components/Interviews';
+
+import Alert from './components/Alert';
+import AddInterview from './components/AddInterview';
+import UserState from './context/user/UserState';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <Navbar/>
+      <UserState>
+      <InterviewState>
+        <AddInterview/>
+      <Interviews/>
+      </InterviewState>
+      </UserState>
+      {/* <InterviewState>
+      <Navbar/>
+      <Alert message="Saved" />
+
+      <Interviews/>
+      <BrowserRouter>
+      <Routes>
+      {/* <div className="formData"> */}
+      {/* <Route path="/" element={<Forms/>} exact /> */}
+      {/* </div> */}
+      {/* <Route path="/create" element={<Forms />} />
+      <Route path="/edit/:id" element={<EditInterview />} />
+      </Routes>
+      
+      </BrowserRouter> 
+      </InterviewState> */} */
+      {/* <div className="formData">
+      <Forms ></Forms>
+      </div>
+ {/* <ListInterview/> */}
+
     </div>
   );
 }

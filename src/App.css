@@ -1,7 +1,13 @@
-.App {
+/* .App {
   text-align: center;
+} */
+*{
+  margin: 0;
+  
 }
-
+.formData{
+  margin: 4rem;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
