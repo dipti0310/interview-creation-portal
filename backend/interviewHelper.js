@@ -1,6 +1,8 @@
 const sgMail = require('@sendgrid/mail');
+const dotenv = require('dotenv');
+dotenv.config();
 const Interview = require("./models/interview");
-const API_KEY="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"
+const API_KEY=process.env.API_KEY;
 sgMail.setApiKey(API_KEY);
 
 const clashinginterviewHelper = async (

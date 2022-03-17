@@ -21,8 +21,8 @@ function Navbar() {
       <ReactBootstrap.Nav.Link href="#pricing">Upcoming Interviews</ReactBootstrap.Nav.Link> */}
     </ReactBootstrap.Nav>
     <ReactBootstrap.Nav>
-    <ReactBootstrap.Nav.Link className='mx-2 active' href="#features">Schedule Interview</ReactBootstrap.Nav.Link>
-      <ReactBootstrap.Nav.Link className='mx-2' href="#pricing">Upcoming Interviews</ReactBootstrap.Nav.Link>
+    {/* <ReactBootstrap.Nav.Link className='mx-2 active' href="#features">Schedule Interview</ReactBootstrap.Nav.Link> */}
+      {/* <ReactBootstrap.Nav.Link className='mx-2' href="#pricing">Upcoming Interviews</ReactBootstrap.Nav.Link> */}
     </ReactBootstrap.Nav>
   </ReactBootstrap.Navbar.Collapse>
   </ReactBootstrap.Container>
