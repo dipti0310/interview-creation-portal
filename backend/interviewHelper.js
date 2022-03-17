@@ -23,13 +23,22 @@ const clashinginterviewHelper = async (
       },
     ]);
 
-    if (clashedInterviews.length) {
-      let a = new Date(Math.max.apply(Math, clashedInterviews.map(function(o) { return o.startDate; })));
-      let b = new Date(Math.min.apply(Math, clashedInterviews.map(function(o) { return o.endDate; })));
+    function dateRangeOverlaps(a_start, a_end, b_start, b_end) {
+      if (a_start <= b_start && b_start <= a_end) return true; // b starts in a
+      if (a_start <= b_end   && b_end   <= a_end) return true; // b ends in a
+      if (b_start <  a_start && a_end   <  b_end) return true; // a in b
+      return false;
+  }
 
-      if(Math.max(inputstartDate,a)<=Math.min(inputendDate,b)){
-        return true;
-      }
+    if (clashedInterviews.length) {
+     
+    for(let i=0;i<clashedInterviews.length;i++){
+       const interview=clashedInterviews[i];
+       if(dateRangeOverlaps(interview.startDate,interview.endDate,inputstartDate,inputendDate))
+       return true;
+    }
+    return false;
+    
     } else {
       return false;
     }
